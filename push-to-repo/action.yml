@@ -2,25 +2,29 @@ name: 'Initia Push to Repo'
 description: 'Push files from repository other repository.'
 inputs:
   sources:
-    description: 'Files/Directories to copy to the destination repository.'
+    description: 'files/directories to copy to the destination repository'
     required: true
   destination-username:
-    description: 'Name/Org of the destination username/org'
+    description: 'name/org of the destination username/org'
     required: true
   destination-repo:
-    description: 'Name of the destination repository'
+    description: 'name of the destination repository'
     required: true
   destination-branch:
     description: 'branch name of the destination repository'
     default: 'main'
     required: false
   destination-dir:
-    description: 'Directory to copy files'
+    description: 'destination directory to copy files'
     default: '.'
     required: false
   email:
     description: 'email for the commit'
     required: true
+  commit-username:
+    description: 'username for the commit'
+    default: ''
+    required: false
   commit-msg:
     description: 'commit message'
     required: true
@@ -35,6 +39,7 @@ runs:
     - ${{ inputs.destination-branch }}
     - ${{ inputs.destination-dir }}
     - ${{ inputs.email }}
+    - ${{ inputs.commit-username }}
     - ${{ inputs.commit-msg }}
 
 
