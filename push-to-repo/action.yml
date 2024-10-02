@@ -1,0 +1,48 @@
+name: 'Initia Push to Repo'
+description: 'Push files from repository other repository.'
+inputs:
+  sources:
+    description: 'files/directories to copy to the destination repository'
+    required: true
+  destination-username:
+    description: 'name/org of the destination username/org'
+    required: true
+  destination-repo:
+    description: 'name of the destination repository'
+    required: true
+  destination-branch:
+    description: 'branch name of the destination repository'
+    default: 'main'
+    required: false
+  destination-dir:
+    description: 'destination directory to copy files'
+    default: '.'
+    required: false
+  email:
+    description: 'email for the commit'
+    required: true
+  commit-username:
+    description: 'username for the commit'
+    default: ''
+    required: false
+  commit-msg:
+    description: 'commit message'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.sources }}
+    - ${{ inputs.destination-username }}
+    - ${{ inputs.destination-repo }}
+    - ${{ inputs.destination-branch }}
+    - ${{ inputs.destination-dir }}
+    - ${{ inputs.email }}
+    - ${{ inputs.commit-username }}
+    - ${{ inputs.commit-msg }}
+
+
+
+
+
