@@ -33,11 +33,11 @@ A github action that copies files or directories from the current repository to 
 
 ## Variables
 * **TOKEN_GITHUB**: the github token (personal token)
-* **sources**: files/directories to copy to the destination repository.
-* **destination-username**: name/org of the destination username/org.
-* **destination-repo**: name of the destination repository.
+* **sources**: files/directories to copy to the destination repository
+* **destination-username**: name/org of the destination username/org
+* **destination-repo**: name of the destination repository
 * destination-branch: [optional] branch name of the destination repository. default 'main'
-* destination-dir: [optional] destination directory to copy files. default 'root'.
-* **email**: email for the commit.
-* commit-username: [optional] username for the commit. default 'destination-username'.
-* **commit-msg**: commit message.
+* destination-dir: [optional] destination directory to copy files. default 'root'
+* **email**: email for the commit
+* commit-username: [optional] username for the commit. default 'destination-username'
+* **commit-msg**: commit message

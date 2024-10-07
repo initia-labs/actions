@@ -1,0 +1,13 @@
+{
+  "name": "get-current-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "moment-timezone": "^0.5.46"
+  }
+}

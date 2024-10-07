@@ -1,0 +1,46 @@
+name: 'Initia Get Current Time'
+description: 'Get current time'
+inputs:
+  format:
+    description: 'time format to use'
+    required: false
+
+  timezone:
+    description: 'timezone to use'
+    required: false
+
+  utcOffset:
+    description: 'UTC offset to use'
+    required: false
+
+outputs:
+  time:
+    description: 'ISO time'
+
+  formattedTime:
+    description: 'formatted time using format and utcOffset varialbes'
+
+  year:
+    description: 'year'
+
+  month:
+    description: 'month'
+
+  day:
+    description: 'day'
+
+  hour:
+    description: 'hour'
+
+  minute:
+    description: 'minute'
+
+  second:
+    description: 'second'
+
+  millisecond:
+    description: 'millisecond'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
