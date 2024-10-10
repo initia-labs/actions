@@ -54,9 +54,7 @@ COMMIT_MESSAGE="${COMMIT_MSG/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
 
 git add .
 git status
-# commit only changes
 git diff-index --quite HEAD || git commit --message "$COMMIT_MSG"
 
 echo "push"
-# --set-upstream: sets the branch when pushing to a branch that does not exist
 git push origin --set-upstream "$DESTINATION_BRANCH"

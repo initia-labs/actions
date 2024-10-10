@@ -41,8 +41,3 @@ runs:
     - ${{ inputs.email }}
     - ${{ inputs.commit-username }}
     - ${{ inputs.commit-msg }}
-
-
-
-
-
