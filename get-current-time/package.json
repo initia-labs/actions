@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "ncc build index.js -m"
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
     "moment-timezone": "^0.5.46"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.2"
   }
 }
