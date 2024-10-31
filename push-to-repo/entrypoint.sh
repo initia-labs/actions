@@ -54,7 +54,11 @@ COMMIT_MESSAGE="${COMMIT_MSG/ORIGIN_COMMIT/$ORIGIN_COMMIT}"
 
 git add .
 git status
-git diff-index --quite HEAD || git commit --message "$COMMIT_MSG"
 
-echo "push"
-git push origin --set-upstream "$DESTINATION_BRANCH"
+if ! git diff-index --quiet HEAD; then
+  git commit --message "$COMMIT_MSG"
+  echo "push"
+  git push origin --set-upstream "$DESTINATION_BRANCH"
+else
+  echo "no changes to commit."
+fi
