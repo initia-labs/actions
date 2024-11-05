@@ -17,9 +17,9 @@ A github action that sets the curent ISO8601 time with formated value. It is use
 ```
 
 ## Variables
-* format: [optional] time format to use
-* timezone: [optional] timezone to use
-* ustcOffset: [optional] UTC offset to use
+* format [optional]: time format to use
+* timezone [optional]: timezone to use
+* ustcOffset [optional]: UTC offset to use
 
 ## Outputs
 * time: ISO time
