@@ -32,6 +32,8 @@ git config --global user.email "$EMAIL"
 git config --global user.name "$COMMIT_USERNAME"
 
 rm -rf .git
+# delete the dir if it already exists.
+rm -rf repo
 
 git clone "https://github.com/$GITHUB_REPOSITORY.git" repo
 
