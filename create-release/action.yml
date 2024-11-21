@@ -26,7 +26,7 @@ inputs:
     description: 'the branch or commit SHA the git tag is created from. Unused if the git tag already exists; defaults to the SHA of the current commit'
     required: false
   owner:
-    description: 'the repository owner's username, used for identifying the repository when releasing for external repositories; defaults to the current owner'
+    description: 'the repository owner username, used for identifying the repository when releasing for external repositories; defaults to the current owner'
     required: false
   repo:
     description: 'the repository name, used for identifying the repository when releasing for external repositories; defaults to the current repository'
